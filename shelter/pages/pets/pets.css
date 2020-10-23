@@ -1,0 +1,323 @@
+.pets_slider .card button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 52px;
+  border-radius: 100px;
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #292929;
+  border: none;
+}
+
+h1 {
+  display: none;
+}
+
+h3 {
+  font-family: Georgia, Times, Times New Roman, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #545454;
+  margin: 0;
+}
+
+h4 {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 115%;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+h5 {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #c4c4c4;
+}
+
+span {
+  display: block;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  width: 1280px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 60px;
+  padding: 30px 0;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+}
+
+.wrapper {
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 60px;
+}
+
+.logo__title {
+  color: #545454;
+  font-size: 32px;
+  letter-spacing: 0.06em;
+  line-height: 35px;
+  font-family: Georgia, Times, Times New Roman, serif;
+}
+
+.logo__subtitle {
+  color: #292929;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 4px;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 443px;
+}
+
+.list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.list__link {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 160%;
+  text-decoration: none;
+}
+
+.list__link:hover {
+  color: #292929;
+}
+
+.list__link-active {
+  border-bottom: solid 3px #f1cdb3;
+  color: #292929;
+}
+
+.list__link-disabled {
+  color: #545454;
+}
+
+.pets {
+  background-color: #f6f6f6;
+}
+
+.pets_title {
+  margin: 80px auto 60px auto;
+}
+
+.pets_title h3 {
+  text-align: center;
+}
+
+.pets_slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  row-gap: 30px;
+}
+
+.pets_slider .card {
+  width: 270px;
+  height: 435px;
+  background-color: #fafafa;
+  border-radius: 9px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.pets_slider .card:hover {
+  -webkit-box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+          box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  background-color: #ffffff;
+}
+
+.pets_slider .card_title {
+  font-family: Georgia, Times, Times New Roman, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #545454;
+  margin: auto auto;
+}
+
+.pets_slider .card button {
+  width: 187px;
+  background-color: #fafafa;
+  margin: 0 auto 30px auto;
+  border: 2px solid #f1cdb3;
+}
+
+.pets_slider .card button:hover {
+  background-color: #fddcc3;
+  cursor: pointer;
+}
+
+.pets_pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 60px auto 100px auto;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.pets_pagination button {
+  display: block;
+  height: 52px;
+  width: 52px;
+  border: 2px solid #f1cdb3;
+  border-radius: 50%;
+  background-color: #fafafa;
+}
+
+.pets_pagination button h4 {
+  margin: 0;
+}
+
+.pets_pagination .disable {
+  border: 2px solid #cdcdcd;
+  color: #cdcdcd;
+}
+
+.pets_pagination .number {
+  background: #f1cdb3;
+}
+
+.pets_pagination .active:hover {
+  background-color: #fddcc3;
+  cursor: pointer;
+}
+
+footer {
+  padding-top: 40px;
+  background: url(noise_lines_transparent@2X.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), #211f20;
+}
+
+footer_wrapper {
+  -webkit-column-gap: 160px;
+          column-gap: 160px;
+}
+
+footer span {
+  display: block;
+}
+
+footer h3 {
+  color: #ffffff;
+}
+
+footer .contacts {
+  height: 268px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer .contacts a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .contacts a h4 {
+  margin: 0;
+  color: #f1cdb3;
+  text-align: start;
+}
+
+footer .contacts a img {
+  margin-right: 20px;
+}
+/*# sourceMappingURL=pets.css.map */
