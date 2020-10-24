@@ -1,3 +1,20 @@
+// media breakpoints
+$laptop_width: 1279px;
+$tablet_width: 768px;
+$mobile_width: 320px;
+
+@mixin media_tablet {
+    @media (max-width: $laptop_width) {
+        @content;
+    }
+}
+
+@mixin media_mobile {
+    @media (max-width: $tablet_width) {
+        @content;
+    }
+}
+
 //fonts family
 $fonts: Georgia, Times, Times New Roman, serif;
 
@@ -78,7 +95,7 @@ body {
 }
 
 .header {
-    width: 1280px;
+    max-width: 1280px;
     position: sticky;
     top: 0;
     height: 60px;
@@ -95,6 +112,10 @@ body {
     margin: 0 auto;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @include media_tablet() {
+        padding: 0 30px;
+    }
 }
 
 .logo {
@@ -177,6 +198,11 @@ body {
         justify-content: space-between;
         row-gap: 30px;
 
+        @include media_tablet(){
+            justify-content: space-around;
+            padding: 0 calc(50% - 300px);
+        }
+
         & .card {
             width: 270px;
             height: 435px;
@@ -185,6 +211,14 @@ body {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
+
+            @include media_tablet(){
+                &:nth-last-child(-n+2){
+                    display: none;
+                }
+
+                flex: 0 1 calc(50%-40px);
+            }
 
             &:hover {
                 box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
@@ -232,7 +266,7 @@ body {
             border-radius: 50%;
             background-color: $color-light-s;
 
-            & h4{
+            & h4 {
                 margin: 0;
             }
         }
@@ -242,8 +276,8 @@ body {
             color: $color-dark-s;
         }
 
-        & .number{
-            background: $color-primary 
+        & .number {
+            background: $color-primary;
         }
 
         & .active {
@@ -260,38 +294,54 @@ footer {
     background: url(noise_lines_transparent@2X.png),
         radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), #211f20;
 
-    &_wrapper{
+    &_wrapper {
         column-gap: 160px;
     }
 
-    & span{
+    & span {
         display: block;
     }
 
-    & h3{
+    & h3 {
         color: $color-light-xl;
     }
+    & .contacts_wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 733px;
+        @include media_tablet() {
+            width: 704px;
+            margin: 0 calc(50% - 354px);
+        }
+    }
 
-    & .contacts{
+    & .contacts {
         height: 268px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
 
-        & a{
+        & a {
             display: flex;
             text-decoration: none;
             align-items: center;
 
-            & h4{
+            & h4 {
                 margin: 0;
                 color: $color-primary;
                 text-align: start;
             }
 
-            & img{
-                margin-right: 20px
+            & img {
+                margin-right: 20px;
             }
+        }
+    }
+
+    & .image {
+        @include media_tablet() {
+            width: 100%;
+            padding: 65px calc(50% - 150px);
         }
     }
 }
