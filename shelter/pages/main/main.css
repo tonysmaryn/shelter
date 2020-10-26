@@ -100,6 +100,9 @@ span {
   height: 22px;
   position: relative;
   margin: 19px 43px 19px 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+  z-index: 30;
 }
 
 @media (max-width: 767px) {
@@ -121,6 +124,29 @@ span {
 .hamburger:after {
   top: calc(100% - 0px);
   left: 0;
+}
+
+.hamburger_active {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: 1s;
+  transition: 1s;
+  z-index: 30ps;
+}
+
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+}
+
+.overlay_active {
+  display: block;
+  background-color: rgba(41, 41, 41, 0.6);
 }
 
 .logo {
@@ -163,8 +189,42 @@ span {
 
 @media (max-width: 767px) {
   .menu {
-    display: none;
+    height: 742px;
+    max-width: 300px;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 20;
+    background-color: #292929;
+    white-space: nowrap;
+    -webkit-transition: 1s;
+    transition: 1s;
   }
+}
+
+@media (max-width: 767px) {
+  .menu_active {
+    right: 0;
+    -webkit-transition: 1s;
+    transition: 1s;
+    width: 320px;
+  }
+}
+
+.menu_active .list {
+  height: 50%;
+  width: 50%;
+  margin: auto 12.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .list {
@@ -198,6 +258,18 @@ span {
 
 .list__link:hover {
   color: #fafafa;
+}
+
+@media (max-width: 767px) {
+  .list__link {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 160%;
+    color: #cdcdcd;
+    text-align: center;
+  }
 }
 
 .list__link-active {
@@ -314,6 +386,7 @@ span {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    width: 300px;
   }
 }
 
@@ -1001,6 +1074,9 @@ footer .contacts h3 {
     padding: 0px;
     margin: 40px auto 0px auto;
     width: 260px;
+  }
+  footer .image img {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=main.css.map */

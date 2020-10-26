@@ -135,6 +135,7 @@ body {
     height: 22px;
     position: relative;
     margin: 19px 43px 19px 0;
+    z-index: 30;
 
     @include media_mobile() {
         display: inline-block;
@@ -156,6 +157,27 @@ body {
         @extend %hamburger-line;
         top: calc(100% - 0px);
         left: 0;
+    }
+}
+
+.hamburger_active{
+    transform: rotate(90deg);
+    transition: 1s;
+    z-index: 30ps;
+}
+
+.overlay{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+
+    &_active{
+        display: block;
+        background-color:rgba(41, 41, 41, 0.6);
     }
 }
 
@@ -188,7 +210,32 @@ body {
     width: 443px;
 
     @include media_mobile() {
-        display: none;
+        height: 742px;
+        max-width: 300px;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 20;
+        background-color: $color-light-xl;
+        white-space: nowrap;
+        transition: 1s;
+    }
+}
+
+.menu_active {
+    @include media_mobile(){
+        right: 0;
+        transition: 1s;
+        width: 320px;
+    }
+
+    & .list{
+        height: 50%;
+        width: 50%;
+        margin: auto 12.5%;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;  
     }
 }
 
@@ -214,6 +261,16 @@ body {
 
     &:hover {
         color: $color-dark-3xl;
+    }
+
+    @include media_mobile() {
+        font-family: Arial;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 32px;
+        line-height: 160%;
+        color: #cdcdcd;
+        text-align: center;
     }
 }
 
