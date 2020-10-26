@@ -245,6 +245,12 @@ span {
         flex-direction: column;
     }
 
+    &_img_container{
+        @include media_mobile(){
+            margin: 0 auto;
+        }
+    }
+
     & img {
         width: 698px;
         height: 724px;
@@ -260,6 +266,8 @@ span {
         @include media_mobile() {
             width: 260px;
             height: 272px;
+            padding: 0px;
+            margin: 30px auto 0 auto;
         }
     }
 }
@@ -382,8 +390,8 @@ h3 {
         }
     }
 
-    & .paragraph-i{
-        @include media_mobile(){
+    & .paragraph-i {
+        @include media_mobile() {
             width: 300px;
             color: $color-dark-xl;
         }
@@ -424,7 +432,7 @@ h3 {
             width: 300px;
         }
 
-        @include media_mobile(){
+        @include media_mobile() {
             width: 260px;
             height: 354px;
         }
@@ -439,6 +447,21 @@ h3 {
         margin: auto;
         width: 400px;
         padding-top: 80px;
+
+        & h3 {
+            @include media_mobile() {
+                font-family: Georgia;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 25px;
+                line-height: 130%;
+                letter-spacing: 0.06em;
+                color: $color-dark-l;
+                margin: 0 auto;
+                text-align: center;
+                width: 290px;
+            }
+        }
     }
 
     &_slider {
@@ -458,6 +481,10 @@ h3 {
             &:hover {
                 background-color: $color-primary-light;
                 cursor: pointer;
+            }
+
+            @include media_mobile() {
+                margin: 20px auto;
             }
         }
 
@@ -514,11 +541,18 @@ h3 {
                 }
             }
 
-            @include media_mobile(){
+            @include media_mobile() {
                 & .card:nth-child(2) {
                     display: none;
                 }
+                width: 100%;
+                order: -1;
+                max-width: 750px;
             }
+        }
+
+        @include media_mobile() {
+            flex-wrap: wrap;
         }
     }
 
@@ -543,6 +577,19 @@ h3 {
     & h3 {
         margin: 80px auto 60px auto;
         text-align: center;
+
+        @include media_mobile() {
+            font-family: Georgia;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 25px;
+            line-height: 130%;
+            letter-spacing: 0.06em;
+            color: $color-dark-l;
+            margin: 0 auto;
+            text-align: center;
+            width: 100%;
+        }
     }
     &_container {
         display: flex;
@@ -558,8 +605,19 @@ h3 {
             row-gap: 108px;
         }
 
+        @include media_mobile() {
+            width: 300px;
+            column-gap: 30px;
+            row-gap: 30px;
+            margin: 20px auto 0 auto;
+        }
+
         & h4 {
             margin-top: 30px;
+
+            @include media_mobile() {
+                white-space: nowrap;
+            }
         }
     }
 
@@ -570,6 +628,10 @@ h3 {
         @include media_tablet() {
             flex: 0 1 20%;
         }
+
+        @include media_mobile() {
+            margin: 30px auto;
+        }
     }
 }
 
@@ -577,6 +639,21 @@ h3 {
     padding: 79px 183px 0 182px;
     @include media_tablet() {
         padding: 0;
+    }
+
+    & h3 {
+        @include media_mobile() {
+            font-family: Georgia;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 25px;
+            line-height: 130%;
+            letter-spacing: 0.06em;
+            color: $color-dark-l;
+            margin: 0 auto;
+            text-align: center;
+            width: 290px;
+        }
     }
 
     &_wrapper {
@@ -591,14 +668,29 @@ h3 {
     & .img_pet {
         padding-top: 10px;
         height: 261px;
+
+        @include media_mobile() {
+            width: 260px;
+            height: 135px;
+        }
     }
 
     &_information {
         width: 380px;
         margin-bottom: 101px;
 
+        @include media_mobile() {
+            width: 300px;
+        }
+
         & h5 {
             margin: 20px 0;
+
+            @include media_mobile() {
+                color: $color-dark-l;
+                letter-spacing: 0px;
+                margin: 20px auto;
+            }
         }
 
         & a {
@@ -611,12 +703,26 @@ h3 {
             border-radius: 9px;
             color: $color-dark-l;
 
+            @include media_mobile() {
+                width: 281px;
+            }
+
             &:hover {
                 transform: scale(1.05);
             }
 
             & h4 {
                 margin: 0;
+
+                @include media_mobile() {
+                    font-family: Georgia;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 15px;
+                    line-height: 110%;
+                    letter-spacing: 0.06em;
+                    color: &$color-dark-l;
+                }
             }
 
             & img {
@@ -637,6 +743,10 @@ h3 {
             color: $color-dark-m;
             margin-top: 20px;
             margin-bottom: 0;
+
+            @include media_mobile() {
+                text-align: justify;
+            }
         }
     }
 }
@@ -646,8 +756,13 @@ footer {
     background: url(noise_lines_transparent@2X.png),
         radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), #211f20;
 
-    &_wrapper {
+    & .footer_wrapper {
         column-gap: 160px;
+        @include media_mobile(){
+            display: flex;
+            flex-direction: column;
+            column-gap: 0px;
+        }
     }
 
     & span {
@@ -665,6 +780,12 @@ footer {
             width: 704px;
             margin: 0 calc(50% - 354px);
         }
+
+        @include media_mobile(){
+            flex-direction: column;
+            width: 300px;
+            margin: 0 auto;     
+        }
     }
 
     & .contacts {
@@ -672,6 +793,10 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+
+        @include media_mobile(){
+            align-items: center;
+        }
 
         & a {
             display: flex;
@@ -688,12 +813,39 @@ footer {
                 margin-right: 20px;
             }
         }
+
+        & h3{
+            text-align: center;
+
+            @include media_mobile() {
+                font-family: Georgia;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 25px;
+                line-height: 130%;
+                letter-spacing: 0.06em;
+                color: $color-light-xl;
+            }
+        }
+
+        & .location{
+            @include media_mobile(){
+                width: 100%;
+            }
+        }
+
     }
 
     & .image {
         @include media_tablet() {
             width: 100%;
             padding: 65px calc(50% - 150px);
+        }
+
+        @include media_mobile(){
+            padding: 0px;
+            margin: 40px auto 0px auto;
+            width: 260px;
         }
     }
 }

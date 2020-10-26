@@ -88,6 +88,49 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 10px;
+  }
+}
+
+.hamburger:before, .hamburger_line, .hamburger:after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  border: 2px solid #f1cdb3;
+  width: 100%;
+}
+
+.hamburger {
+  display: none;
+  width: 30px;
+  height: 22px;
+  position: relative;
+  margin: 19px 43px 19px 0;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: inline-block;
+  }
+}
+
+.hamburger:before {
+  top: 0;
+  left: 0;
+}
+
+.hamburger_line {
+  top: calc(50% + 0px);
+  left: 0;
+}
+
+.hamburger:after {
+  top: calc(100% - 0px);
+  left: 0;
+}
+
 .logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -124,6 +167,12 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 443px;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
 }
 
 .list {
@@ -176,8 +225,28 @@ body {
   margin: 80px auto 60px auto;
 }
 
+@media (max-width: 768px) {
+  .pets_title {
+    width: 100%;
+  }
+}
+
 .pets_title h3 {
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .pets_title h3 {
+    font-family: Georgia;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #545454;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 .pets_slider {
@@ -197,6 +266,19 @@ body {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     padding: 0 calc(50% - 300px);
+  }
+}
+
+@media (max-width: 768px) {
+  .pets_slider {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto;
   }
 }
 
@@ -222,7 +304,13 @@ body {
         -ms-flex: 0 1 calc(50%-40px);
             flex: 0 1 calc(50%-40px);
   }
-  .pets_slider .card:nth-last-child(-n+2) {
+  .pets_slider .card:nth-last-child(-n + 2) {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .pets_slider .card:nth-last-child(-n+5) {
     display: none;
   }
 }
@@ -268,6 +356,17 @@ body {
           column-gap: 20px;
 }
 
+@media (max-width: 768px) {
+  .pets_pagination {
+    -webkit-column-gap: 10px;
+            column-gap: 10px;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .pets_pagination button {
   display: block;
   height: 52px;
@@ -300,9 +399,23 @@ footer {
   background: url(noise_lines_transparent@2X.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), #211f20;
 }
 
-footer_wrapper {
+footer .footer_wrapper {
   -webkit-column-gap: 160px;
           column-gap: 160px;
+}
+
+@media (max-width: 768px) {
+  footer .footer_wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-column-gap: 0px;
+            column-gap: 0px;
+  }
 }
 
 footer span {
@@ -330,6 +443,17 @@ footer .contacts_wrapper {
   }
 }
 
+@media (max-width: 768px) {
+  footer .contacts_wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+
 footer .contacts {
   height: 268px;
   display: -webkit-box;
@@ -341,6 +465,14 @@ footer .contacts {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+@media (max-width: 768px) {
+  footer .contacts {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 footer .contacts a {
@@ -363,10 +495,40 @@ footer .contacts a img {
   margin-right: 20px;
 }
 
+footer .contacts h3 {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  footer .contacts h3 {
+    font-family: Georgia;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 768px) {
+  footer .contacts .location {
+    width: 100%;
+  }
+}
+
 @media (max-width: 1279px) {
   footer .image {
     width: 100%;
     padding: 65px calc(50% - 150px);
+  }
+}
+
+@media (max-width: 768px) {
+  footer .image {
+    padding: 0px;
+    margin: 40px auto 0px auto;
+    width: 260px;
   }
 }
 /*# sourceMappingURL=pets.css.map */
