@@ -150,9 +150,11 @@ body {
   z-index: 10;
 }
 
-.overlay_active {
-  display: block;
-  background-color: rgba(41, 41, 41, 0.6);
+@media (max-width: 768px) {
+  .overlay_active {
+    display: block;
+    background-color: rgba(41, 41, 41, 0.6);
+  }
 }
 
 .logo {
@@ -167,6 +169,10 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 60px;
+}
+
+.logo:hover {
+  cursor: pointer;
 }
 
 .logo__title {
@@ -215,22 +221,21 @@ body {
     transition: 1s;
     width: 320px;
   }
-}
-
-.menu_active .list {
-  height: 50%;
-  width: 50%;
-  margin: auto 12.5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  .menu_active .list {
+    height: 50%;
+    width: 50%;
+    margin: auto 12.5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .list {
@@ -260,6 +265,7 @@ body {
   font-size: 15px;
   line-height: 160%;
   text-decoration: none;
+  color: #545454;
 }
 
 .list__link:hover {
@@ -284,7 +290,7 @@ body {
 }
 
 .list__link-disabled {
-  color: #545454;
+  pointer-events: none;
 }
 
 .pets {
@@ -380,7 +386,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .pets_slider .card:nth-last-child(-n+5) {
+  .pets_slider .card:nth-last-child(-n + 5) {
     display: none;
   }
 }

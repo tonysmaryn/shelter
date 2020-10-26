@@ -254,6 +254,7 @@ span {
   font-size: 15px;
   line-height: 160%;
   text-decoration: none;
+  color: #cdcdcd;
 }
 
 .list__link:hover {
@@ -278,7 +279,7 @@ span {
 }
 
 .list__link-disabled {
-  color: #cdcdcd;
+  pointer-events: none;
 }
 
 .header-background {
