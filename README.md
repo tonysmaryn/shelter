@@ -1,2 +1,4 @@
-# tonysmaryn-JS2020Q3
-Private repository for @tonysmaryn
+# Shelter
+Simply website with responsive layout
+
+Deploy: https://tonysmaryn.github.io/shelter/shelter/pages/main/
